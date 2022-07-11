@@ -12,6 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:autofilledHighlight" tools:targetApi="o">@android:color/transparent</item>
     </style>
 
     <!-- custom styles silong-->
@@ -24,7 +25,8 @@
         <item name="android:background">@drawable/tf_background</item>
         <item name="android:paddingStart">15dp</item>
         <item name="android:paddingEnd">15dp</item>
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:inputType">text</item>
     </style>
 
     <style name="pinkButton_style">
@@ -32,7 +34,7 @@
         <item name="android:height">60dp</item>
         <item name="android:backgroundTint">@color/pink</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">17dp</item>
+        <item name="android:textSize">17sp</item>
         <item name="android:textStyle">bold</item>
         <item name="cornerRadius">50dp</item>
     </style>
@@ -42,7 +44,7 @@
         <item name="android:height">60dp</item>
         <item name="android:backgroundTint">@color/orange</item>
         <item name="android:gravity">center</item>
-        <item name="android:textSize">17dp</item>
+        <item name="android:textSize">17sp</item>
         <item name="android:textStyle">bold</item>
         <item name="cornerRadius">50dp</item>
     </style>

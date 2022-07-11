@@ -8,25 +8,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 
-    Button signUp;
+    ImageView backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_sign_up);
 
-        signUp = (Button) findViewById(R.id.btnSignup);
+        getSupportActionBar().hide();
+        backButton = (ImageView) findViewById(R.id.btnBack);
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i1 = new Intent(MainActivity.this, SignUp.class);
+                Intent i1 = new Intent(SignUp.this, MainActivity.class);
                 startActivity(i1);
                 finish();
             }
         });
+
     }
 }

@@ -4,11 +4,10 @@
     package="com.example.scratch">
 
     <supports-screens
-        android:smallScreens="true"
         android:largeScreens="true"
-        android:xlargeScreens="true"
         android:normalScreens="true"
-        />
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -21,18 +20,21 @@
         android:theme="@style/Theme.Scratch"
         tools:targetApi="31">
         <activity
+            android:name=".SignUp"
+            android:exported="false" />
+        <activity
             android:name=".splash"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>

@@ -25,20 +25,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:text="Log-In or Sign-Up"
                 android:textColor="@color/white"
-                android:textSize="25dp"
-                android:textStyle="bold|italic" />
+                android:textSize="25sp"
+                android:textStyle="bold|italic"
+                android:paddingEnd="10dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="20dp"
                 android:text="to get started."
                 android:textColor="@color/white"
-                android:textSize="25dp"
+                android:textSize="25sp"
                 android:textStyle="bold|italic" />
 
         </LinearLayout>
@@ -58,7 +59,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/inputEmail"
+            android:id="@+id/tfloginEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/textField_style"
@@ -67,13 +68,14 @@
             android:hint="Email Address" />
 
         <EditText
-            android:id="@+id/inputPassword"
+            android:id="@+id/tfloginPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/textField_style"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:hint="Password" />
+            android:hint="Password"
+            android:inputType="textPassword"/>
 
         <TextView
             android:id="@+id/forgotPassword"
@@ -85,7 +87,7 @@
             android:clickable="true"
             android:text="Forgot Password?"
             android:textColor="@color/pink"
-            android:textSize="18dp"
+            android:textSize="18sp"
             tools:ignore="TouchTargetSizeCheck" />
 
     </LinearLayout>
@@ -97,13 +99,21 @@
         android:gravity="center|bottom"
         android:orientation="vertical">
 
-        <!--<Button
+        <!--<ImageView
+            android:id="@+id/piccc"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:clickable="true"
+            android:src="@drawable/ic_round_arrow_back_ios_24"
+            app:tint="@color/pink" />
+
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/circleButton_style"/>-->
 
         <Button
-            android:id="@+id/loginBtn"
+            android:id="@+id/btnLogin"
             style="@style/pinkButton_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -111,7 +121,7 @@
             android:text="log in" />
 
         <Button
-            android:id="@+id/signupBtn"
+            android:id="@+id/btnSignup"
             style="@style/orangeButton_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
