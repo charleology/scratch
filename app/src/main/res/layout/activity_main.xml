@@ -17,8 +17,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="2"
             android:layout_marginBottom="30dp"
-            android:gravity="bottom"
             android:orientation="vertical">
 
             <TextView
@@ -44,45 +44,57 @@
         </LinearLayout>
 
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="90dp"
             android:layout_height="90dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginStart="40dp"
+            android:layout_weight="1"
             android:layout_marginBottom="20dp"
             android:src="@drawable/circlelogo_white" />
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/emailTF"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        style="@style/textField_style"
-        android:hint="Email Address" />
-
-    <EditText
-        android:id="@+id/passTF"
-        style="@style/textField_style"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:hint="Password" />
-
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="Forgot Password?"
-        android:textColor="@color/pink"
-        android:textSize="18dp" />
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/inputEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textField_style"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:hint="Email Address" />
+
+        <EditText
+            android:id="@+id/inputPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/textField_style"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:hint="Password" />
+
+        <TextView
+            android:id="@+id/forgotPassword"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Forgot Password?"
+            android:textColor="@color/pink"
+            android:textSize="18dp" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:paddingBottom="50dp"
         android:gravity="center|bottom"
-        android:orientation="vertical"
-        android:layout_marginBottom="50dp">
+        android:orientation="vertical">
 
         <!--<Button
             android:layout_width="wrap_content"
@@ -90,17 +102,19 @@
             style="@style/circleButton_style"/>-->
 
         <Button
+            android:id="@+id/loginBtn"
+            style="@style/pinkButton_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/pinkButton_style"
-            android:text="log in"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:text="log in" />
 
         <Button
+            android:id="@+id/signupBtn"
+            style="@style/orangeButton_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/orangeButton_style"
-            android:text="sign up"/>
+            android:text="sign up" />
 
     </LinearLayout>
 

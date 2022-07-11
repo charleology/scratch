@@ -3,6 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.scratch">
 
+    <supports-screens
+        android:smallScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:normalScreens="true"
+        />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"

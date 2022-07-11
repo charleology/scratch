@@ -17,6 +17,7 @@
     <!-- custom styles silong-->
 
     <style name="textField_style">
+        <!-- Change textfield width and height on tf_background.xml -->
         <item name="android:layout_width">370dp</item>
         <item name="android:layout_height">60dp</item>
         <item name="android:textColorHint">@color/textgray</item>
