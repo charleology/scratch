@@ -10,7 +10,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="260dp"
-        android:background="@drawable/dogs_blur"
+        android:background="@drawable/login_background"
         android:gravity="bottom"
         android:orientation="horizontal">
 
@@ -77,15 +77,16 @@
 
         <TextView
             android:id="@+id/forgotPassword"
-            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:clickable="true"
             android:text="Forgot Password?"
             android:textColor="@color/pink"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            tools:ignore="TouchTargetSizeCheck" />
 
     </LinearLayout>
 
