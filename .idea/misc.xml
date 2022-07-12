@@ -4,26 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2455" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/drawable/spin_background.xml" value="0.2555" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/drawable/tf_background.xml" value="0.176" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_main.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_sign_up.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/drop_down_items.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/pink_button.xml" value="0.25" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/text_field.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.121" />
-        <entry key="..\:/Users/richard/AndroidStudioProjects/scratch/app/src/main/res/drawable/ic_baseline_calendar_today_24.xml" value="0.1945" />
-        <entry key="..\:/Users/richard/AndroidStudioProjects/scratch/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1945" />
-        <entry key="..\:/Users/richard/AndroidStudioProjects/scratch/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1945" />
-        <entry key="..\:/Users/richard/AndroidStudioProjects/scratch/app/src/main/res/drawable/ic_round_arrow_back_ios_24.xml" value="0.1945" />
-        <entry key="..\:/Users/richard/AndroidStudioProjects/scratch/app/src/main/res/drawable/spin_background.xml" value="0.1945" />
-        <entry key="..\:/Users/richard/AndroidStudioProjects/scratch/app/src/main/res/drawable/tf_background.xml" value="0.1945" />
-        <entry key="..\:/Users/richard/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/richard/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
-        <entry key="..\:/Users/richard/AndroidStudioProjects/scratch/app/src/main/res/layout/drop_down_items.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/richard/AndroidStudioProjects/scratch/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1945" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

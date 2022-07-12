@@ -38,11 +38,6 @@ public class SignUp extends AppCompatActivity {
         backButton = (ImageView) findViewById(R.id.btnBack);
         fieldDate = (EditText) findViewById(R.id.tfsignupBirthday);
 
-        final Calendar calendar = Calendar.getInstance();
-        int year = calendar.get(Calendar.YEAR);
-        int month = calendar.get(Calendar.MONTH);
-        int day = calendar.get(Calendar.DAY_OF_MONTH);
-
         MaterialDatePicker datePicker = MaterialDatePicker.Builder.datePicker().setTitleText("Select date").setSelection(MaterialDatePicker.todayInUtcMilliseconds()).build();
 
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -68,7 +63,7 @@ public class SignUp extends AppCompatActivity {
         });
 
        gender= findViewById(R.id.spin_gender);
-       String[] gen = {"Male","Female"};
+       String[] gen = {"Male", "Female"};
         ArrayList<String> genderList = new ArrayList<>(Arrays.asList(gen));
         ArrayAdapter<String> genderAdapter = new ArrayAdapter<>(this, R.layout.drop_down_items,genderList);
         gender.setAdapter(genderAdapter);
