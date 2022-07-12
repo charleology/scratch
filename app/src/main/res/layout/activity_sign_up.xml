@@ -144,16 +144,14 @@
                     android:focusable="false"
                     android:focusableInTouchMode="false"/>
 
-                <AutoCompleteTextView
-                    android:id="@+id/tfsignupGender"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-                    android:layout_marginStart="10dp"
-                    android:background="@drawable/tf_background"
-                    android:layout_weight="1"
-                    android:hint="Gender"
-                    android:inputType="none"/>
+                    <Spinner
+                        android:id="@+id/spin_gender"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="1dp"
+                        />
 
         </LinearLayout>
 
