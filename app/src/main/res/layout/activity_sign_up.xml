@@ -142,7 +142,7 @@
                     android:drawableTint="@color/textgray"
                     android:cursorVisible="false"
                     android:focusable="false"
-                    android:focusableInTouchMode="false"
+                    android:focusableInTouchMode="false"/>
 
                 <AutoCompleteTextView
                     android:id="@+id/tfsignupGender"
