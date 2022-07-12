@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp"
-    android:paddingStart="10dp"
-    android:paddingEnd="10dp"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp"
+    android:layout_gravity="center"
     android:orientation="vertical"
-    android:layout_gravity="center">
+    android:paddingStart="10dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="10dp"
+    tools:context=".SignUp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +30,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/ic_round_arrow_back_ios_24"
-                app:tint="@color/textgray"/>
+                app:tint="@color/textgray" />
 
         </LinearLayout>
 
@@ -38,9 +38,9 @@
             android:id="@+id/elementsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             android:paddingStart="20dp"
-            android:gravity="center_vertical"
             android:paddingBottom="10dp">
 
             <TextView
@@ -48,15 +48,15 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Sign Up"
-                android:textStyle="bold|italic"
+                android:textColor="@color/textgray"
                 android:textSize="40sp"
-                android:textColor="@color/textgray"/>
+                android:textStyle="bold|italic" />
 
             <ImageView
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_weight="1"
-                android:src="@drawable/circlelogo_gradient"/>
+                android:src="@drawable/circlelogo_gradient" />
 
         </LinearLayout>
 
@@ -64,70 +64,63 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="5dp">
 
         <LinearLayout
-            android:paddingTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingHorizontal="5dp">
+            android:paddingHorizontal="5dp"
+            android:paddingTop="20dp">
 
             <EditText
                 android:id="@+id/tfsignupFname"
+                style="@style/textField_style"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
                 android:layout_weight="1"
-                style="@style/textField_style"
-                android:hint="First Name"
-                android:layout_marginEnd="10dp"/>
+                android:hint="First Name" />
 
             <EditText
                 android:id="@+id/tfsignupLname"
+                style="@style/textField_style"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
                 android:layout_weight="1"
-                style="@style/textField_style"
-                android:hint="Last Name"
-                android:layout_marginStart="10dp"/>
+                android:hint="Last Name" />
 
         </LinearLayout>
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/tfsignupPassword"
+            style="@style/textField_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingHorizontal="5dp">
+            android:layout_marginTop="20dp"
+            android:hint="Password"
+            android:inputType="textPassword" />
 
-            <EditText
-                android:id="@+id/tfsignupPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/textField_style"
-                android:layout_marginTop="20dp"
-                android:hint="Password"
-                android:inputType="textPassword"/>
+        <EditText
+            android:id="@+id/tfsignupConPassword"
+            style="@style/textField_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Confirm Password"
+            android:inputType="textPassword" />
 
-            <EditText
-                android:id="@+id/tfsignupConPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/textField_style"
-                android:layout_marginTop="20dp"
-                android:hint="Confirm Password"
-                android:inputType="textPassword"/>
-
-            <EditText
-                android:id="@+id/tfsignupEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/textField_style"
-                android:layout_marginTop="20dp"
-                android:hint="Email Address"
-                android:inputType="textEmailAddress"/>
-
-        </LinearLayout>
+        <EditText
+            android:id="@+id/tfsignupEmail"
+            style="@style/textField_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -135,13 +128,43 @@
             android:orientation="horizontal"
             android:paddingTop="20dp">
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/textField_style"
-                android:hint="Birthday"/>
+                <EditText
+                    android:id="@+id/tfsignupBirthday"
+                    style="@style/textField_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:inputType="date"
+                    android:hint="Birthday"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/ic_baseline_calendar_today_24"
+                    android:drawableTint="@color/textgray"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+
+                <AutoCompleteTextView
+                    android:id="@+id/tfsignupGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/tf_background"
+                    android:layout_weight="1"
+                    android:hint="Gender"
+                    android:inputType="none"/>
 
         </LinearLayout>
+
+        <EditText
+            android:id="@+id/tfsignupContact"
+            style="@style/textField_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Contact Number"
+            android:inputType="phone" />
 
     </LinearLayout>
 

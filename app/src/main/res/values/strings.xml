@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">scratch</string>
+    <string name="select">Gender</string>
 </resources>
