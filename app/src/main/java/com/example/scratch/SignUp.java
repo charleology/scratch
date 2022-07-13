@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import com.google.android.material.datepicker.MaterialDatePicker;
@@ -30,6 +32,8 @@ public class SignUp extends AppCompatActivity {
     ImageView backButton;
     EditText fieldDate;
     Spinner gender;
+    Button next;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +41,7 @@ public class SignUp extends AppCompatActivity {
         getSupportActionBar().hide();
         backButton = (ImageView) findViewById(R.id.btnBack);
         fieldDate = (EditText) findViewById(R.id.tfsignupBirthday);
+        next = (Button) findViewById(R.id.btnsignupNext);
 
         MaterialDatePicker datePicker = MaterialDatePicker.Builder.datePicker().setTitleText("Select date").setSelection(MaterialDatePicker.todayInUtcMilliseconds()).build();
 
@@ -62,11 +67,18 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
-       gender= findViewById(R.id.spin_gender);
-       String[] gen = {"Male", "Female"};
+        gender = findViewById(R.id.spsignupGender);
+        String[] gen = {"Male", "Female"};
         ArrayList<String> genderList = new ArrayList<>(Arrays.asList(gen));
-        ArrayAdapter<String> genderAdapter = new ArrayAdapter<>(this, R.layout.drop_down_items,genderList);
+        ArrayAdapter<String> genderAdapter = new ArrayAdapter<>(this, R.layout.drop_down_items, genderList);
         gender.setAdapter(genderAdapter);
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setContentView(R.layout.activity_sign_up_two);
+            }
+        });
 
     }
 }

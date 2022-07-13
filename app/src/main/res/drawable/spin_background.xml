@@ -13,8 +13,8 @@
                 </shape>
             </item>
             <item>
-                <bitmap android:gravity="end" android:src="@drawable/down_grey" android:tint="@color/textgray" />
-
+                <bitmap android:gravity="end" android:src="@drawable/down_grey"
+                    android:tint="@color/textgray"/>
             </item>
         </layer-list>
     </item>
