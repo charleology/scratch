@@ -29,10 +29,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:paddingStart="15dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp">
 
                 <ImageView
+                    android:onClick="back"
                     android:id="@+id/btnBack"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -89,9 +91,11 @@
                 tools:ignore="SpeakableTextPresentCheck">
 
                 <ImageView
+                    android:clickable="true"
                     android:id="@+id/ivsignupPicture"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"/>
 
             </androidx.cardview.widget.CardView>
 
@@ -116,9 +120,12 @@
                 android:layout_weight="1"
                 tools:ignore="SpeakableTextPresentCheck" />
 
-            <Spinner
+            <EditText
+                android:editable="false"
+                android:inputType="none"
+                android:textColor="@color/textgray"
                 android:id="@+id/spsignupMunicipality"
-                style="@style/spinner_style"
+                style="@style/textField_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="12dp"
@@ -132,9 +139,12 @@
                 android:layout_marginVertical="12dp"
                 android:orientation="horizontal">
 
-                <Spinner
-                    android:id="@+id/spsignupGender"
-                    style="@style/spinner_style"
+                <EditText
+                    android:editable="false"
+                    android:inputType="none"
+                    android:textColor="@color/textgray"
+                    android:id="@+id/spsignupProvince"
+                    style="@style/textField_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="1dp"
@@ -142,14 +152,15 @@
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <EditText
-                    android:id="@+id/tfsignupBirthday"
+                    android:editable="false"
+                    android:id="@+id/tfsignupZip"
                     style="@style/textField_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_weight="2"
-                    android:hint="Zip Code"
-                    android:inputType="number" />
+                    android:textColor="@color/textgray"
+                    android:inputType="none" />
 
             </LinearLayout>
 

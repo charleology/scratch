@@ -14,6 +14,7 @@ public class splash extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
         getSupportActionBar().hide();
         overridePendingTransition(R.anim.abc_fade_in,R.anim.abc_fade_out);
+
         h.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -22,6 +23,6 @@ public class splash extends AppCompatActivity {
                 overridePendingTransition(R.anim.abc_fade_in,R.anim.abc_fade_out);
                 finish();
             }
-        }, 2000);
+        }, 3000);
     }
 }

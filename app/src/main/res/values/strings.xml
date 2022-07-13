@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">scratch</string>
+
+    <string-array name="Gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Gender</item>
+    </string-array>
+
+    <string-array name="Barangay">
+        <item>Minuyan III</item>
+        <item>Minuyan Proper</item>
+        <item>San Rafael I</item>
+        <item>Sapang Palay Proper</item>
+        <item>Sta. Cruz I</item>
+        <item>Sto. Cristo</item>
+        <item>Barangay</item>
+    </string-array>
 </resources>

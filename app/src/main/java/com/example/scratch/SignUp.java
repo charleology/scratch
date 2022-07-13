@@ -30,8 +30,9 @@ import java.util.Calendar;
 public class SignUp extends AppCompatActivity {
 
     ImageView backButton;
-    EditText fieldDate;
-    Spinner gender;
+    EditText fieldFname, fieldLname, fieldPassword, fieldConfirmpass,
+            fieldEmail, fieldDBirthday, fieldContact;
+    Spinner spinGender;
     Button next;
 
     @Override
@@ -39,46 +40,61 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         getSupportActionBar().hide();
+
         backButton = (ImageView) findViewById(R.id.btnBack);
-        fieldDate = (EditText) findViewById(R.id.tfsignupBirthday);
+        fieldDBirthday = (EditText) findViewById(R.id.tfsignupBirthday);
         next = (Button) findViewById(R.id.btnsignupNext);
+        spinGender = findViewById(R.id.spsignupGender);
+        fieldFname = (EditText) findViewById(R.id.tfsignupFname);
+        fieldLname = (EditText) findViewById(R.id.tfsignupLname);
+        fieldPassword = (EditText) findViewById(R.id.tfsignupPassword);
+        fieldConfirmpass = (EditText) findViewById(R.id.tfsignupConPassword);
+        fieldEmail = (EditText) findViewById(R.id.tfsignupEmail);
+        fieldContact = (EditText) findViewById(R.id.tfsignupContact);
+
+        String[] gen = getResources().getStringArray(R.array.Gender);
 
         MaterialDatePicker datePicker = MaterialDatePicker.Builder.datePicker().setTitleText("Select date").setSelection(MaterialDatePicker.todayInUtcMilliseconds()).build();
 
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i1 = new Intent(SignUp.this, MainActivity.class);
-                startActivity(i1);
-                finish();
-            }
-        });
-
-        fieldDate.setOnClickListener(new View.OnClickListener() {
+        fieldDBirthday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 datePicker.show(getSupportFragmentManager(), "Material_Date_Picker");
                 datePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener() {
                     @Override
                     public void onPositiveButtonClick(Object selection) {
-                        fieldDate.setText(datePicker.getHeaderText());
+                        fieldDBirthday.setText(datePicker.getHeaderText());
                     }
                 });
             }
         });
 
-        gender = findViewById(R.id.spsignupGender);
-        String[] gen = {"Male", "Female"};
-        ArrayList<String> genderList = new ArrayList<>(Arrays.asList(gen));
-        ArrayAdapter<String> genderAdapter = new ArrayAdapter<>(this, R.layout.drop_down_items, genderList);
-        gender.setAdapter(genderAdapter);
+        ArrayAdapter<String> genderAdapter = new ArrayAdapter<String>(this, R.layout.drop_down_items, gen) {
+            @Override
+            public int getCount() {
+                return gen.length-1;
+            }
+        };
+        spinGender.setAdapter(genderAdapter);
+        spinGender.setSelection(gen.length-1);
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.activity_sign_up_two);
+                Intent i = new Intent(SignUp.this, SignUp2.class);
+                startActivity(i);
             }
         });
 
+    }
+
+    public void back(View view){
+        onBackPressed();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finish();
     }
 }

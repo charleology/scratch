@@ -8,7 +8,7 @@
                     <solid android:color="@color/lightgray" />
                     <size android:height="60dp" />
                     <size android:width="370dp" />
-                    <padding android:right="10dp"/>
+                    <padding android:right="20dp"/>
 
                 </shape>
             </item>
