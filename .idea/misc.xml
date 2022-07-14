@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/drawable/dialog_bg.xml" value="0.2545" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/drawable/gradient_bg.xml" value="0.2545" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2455" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/drawable/spin_background.xml" value="0.2555" />
@@ -12,9 +13,12 @@
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_sign_up2.xml" value="0.16216216216216217" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_sign_up_two.xml" value="0.20964912280701756" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_terms_conditions.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/dialog_bg.xml" value="0.20964912280701756" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/drop_down_items.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/pink_button.xml" value="0.25" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/text_field.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/tnc_dialog.xml" value="0.20964912280701756" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.121" />
       </map>
     </option>

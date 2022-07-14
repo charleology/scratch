@@ -34,12 +34,13 @@
                 android:paddingBottom="10dp">
 
                 <ImageView
-                    android:onClick="back"
                     android:id="@+id/btnBack"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
+                    android:onClick="back"
                     android:src="@drawable/ic_round_arrow_back_ios_24"
-                    app:tint="@color/textgray" />
+                    app:tint="@color/textgray"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
             </LinearLayout>
 
@@ -83,19 +84,19 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_marginBottom="7dp"
-                android:clickable="true"
                 android:foreground="@drawable/ic_round_camera_alt_24"
                 android:foregroundGravity="center"
                 android:foregroundTint="@color/textgray"
                 app:cardCornerRadius="100dp"
-                tools:ignore="SpeakableTextPresentCheck">
+                tools:ignore="SpeakableTextPresentCheck,DuplicateClickableBoundsCheck">
 
                 <ImageView
-                    android:clickable="true"
                     android:id="@+id/ivsignupPicture"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="fitCenter"/>
+                    android:clickable="true"
+                    android:scaleType="fitCenter"
+                    tools:ignore="SpeakableTextPresentCheck" />
 
             </androidx.cardview.widget.CardView>
 
@@ -152,15 +153,16 @@
                     tools:ignore="SpeakableTextPresentCheck" />
 
                 <EditText
-                    android:editable="false"
                     android:id="@+id/tfsignupZip"
                     style="@style/textField_style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_weight="2"
+                    android:editable="false"
+                    android:inputType="none"
                     android:textColor="@color/textgray"
-                    android:inputType="none" />
+                    tools:ignore="SpeakableTextPresentCheck" />
 
             </LinearLayout>
 
