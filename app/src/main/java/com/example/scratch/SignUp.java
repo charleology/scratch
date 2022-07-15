@@ -13,6 +13,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -47,6 +48,10 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         getSupportActionBar().hide();
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT){
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
+        }
 
         backButton = (ImageView) findViewById(R.id.btnBack);
         fieldDBirthday = (EditText) findViewById(R.id.tfsignupBirthday);

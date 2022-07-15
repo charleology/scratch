@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:id="@+id/loginLayout">
-
+    android:id="@+id/loginLayout"
+    android:theme="@style/Theme.Scratch.noActionbarAndStatusBar">
+   
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="260dp"
