@@ -1,9 +1,12 @@
 package com.example.scratch;
 
+import static com.example.scratch.MainActivity.setWindowFlag;
+
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
 
+import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
@@ -13,6 +16,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -48,10 +52,6 @@ public class SignUp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         getSupportActionBar().hide();
-        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.KITKAT){
-            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-
-        }
 
         backButton = (ImageView) findViewById(R.id.btnBack);
         fieldDBirthday = (EditText) findViewById(R.id.tfsignupBirthday);
@@ -133,6 +133,18 @@ public class SignUp extends AppCompatActivity {
         public void onDateSet(DatePicker view, int year, int month, int day) {
             fieldDBirthday.setText(month+1+"/"+day+"/"+year);
         }
+    }
+
+    public static void setWindowFlag(Activity activity, final int bits, boolean on) {
+
+        Window win = activity.getWindow();
+        WindowManager.LayoutParams winParams = win.getAttributes();
+        if (on) {
+            winParams.flags |= bits;
+        } else {
+            winParams.flags &= ~bits;
+        }
+        win.setAttributes(winParams);
     }
 
 }
