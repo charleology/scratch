@@ -1,12 +1,16 @@
 package com.example.scratch;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,22 +23,25 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 
+import com.google.android.material.datepicker.CalendarConstraints;
+import com.google.android.material.datepicker.DateValidatorPointBackward;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Calendar;
+
 
 public class SignUp extends AppCompatActivity {
 
     ImageView backButton;
-    EditText fieldFname, fieldLname, fieldPassword, fieldConfirmpass,
+    static EditText fieldFname, fieldLname, fieldPassword, fieldConfirmpass,
             fieldEmail, fieldDBirthday, fieldContact;
     Spinner spinGender;
     Button next;
+    int year, month, day;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,18 +61,21 @@ public class SignUp extends AppCompatActivity {
 
         String[] gen = getResources().getStringArray(R.array.Gender);
 
-        MaterialDatePicker datePicker = MaterialDatePicker.Builder.datePicker().setTitleText("Select date").setSelection(MaterialDatePicker.todayInUtcMilliseconds()).build();
+        //MaterialDatePicker datePicker = MaterialDatePicker.Builder.datePicker().setTitleText("Select date").setSelection(MaterialDatePicker.todayInUtcMilliseconds()).build();
 
         fieldDBirthday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                datePicker.show(getSupportFragmentManager(), "Material_Date_Picker");
-                datePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener() {
-                    @Override
-                    public void onPositiveButtonClick(Object selection) {
-                        fieldDBirthday.setText(datePicker.getHeaderText());
-                    }
-                });
+                //datePicker.show(getSupportFragmentManager(), "Material_Date_Picker");
+                //datePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener() {
+                //    @Override
+                //    public void onPositiveButtonClick(Object selection) {
+                //        fieldDBirthday.setText(datePicker.getHeaderText());
+                //    }
+                //});
+
+                DialogFragment newFragment = new DatePickerFragment();
+                newFragment.show(getSupportFragmentManager(), "datePicker");
             }
         });
 
@@ -97,4 +107,27 @@ public class SignUp extends AppCompatActivity {
         super.onBackPressed();
         this.finish();
     }
+
+    //date picker fragment
+    //only allows 18 years old and above
+    public static class DatePickerFragment extends DialogFragment
+            implements DatePickerDialog.OnDateSetListener {
+
+        @Override
+        public Dialog onCreateDialog(Bundle savedInstanceState) {
+            final Calendar c = Calendar.getInstance();
+            int year = c.get(Calendar.YEAR);
+            int month = c.get(Calendar.MONTH);
+            int day = c.get(Calendar.DAY_OF_MONTH);
+            DatePickerDialog dialog = new DatePickerDialog(getActivity(), this, year, month, day);
+            c.add(Calendar.YEAR, -18);
+            dialog.getDatePicker().setMaxDate(c.getTimeInMillis());
+            return  dialog;
+        }
+
+        public void onDateSet(DatePicker view, int year, int month, int day) {
+            fieldDBirthday.setText(month+1+"/"+day+"/"+year);
+        }
+    }
+
 }

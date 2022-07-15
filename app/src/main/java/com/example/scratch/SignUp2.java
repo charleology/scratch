@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.io.BufferedInputStream;
+import java.net.Inet4Address;
 import java.util.Arrays;
 
 public class SignUp2 extends AppCompatActivity {
@@ -111,6 +112,7 @@ public class SignUp2 extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //Codes here
+                        signuploadingScreen();
                     }
                 });
                 builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
@@ -160,6 +162,11 @@ public class SignUp2 extends AppCompatActivity {
 
     public void showTnc(){
         Intent i = new Intent(SignUp2.this, TermsConditions.class);
+        startActivity(i);
+    }
+
+    public void signuploadingScreen(){
+        Intent i = new Intent(SignUp2.this, ProcessSignUp.class);
         startActivity(i);
     }
 }
