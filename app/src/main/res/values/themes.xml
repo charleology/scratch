@@ -26,10 +26,13 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:fitsSystemWindows">true</item>
-
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:fitsSystemWindows">false</item>
 
     </style>
+
+
 
     <style name="textField_style">
         <!-- Change textfield width and height on tf_background.xml -->
