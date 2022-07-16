@@ -7,8 +7,10 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
 import android.text.InputType;
 import android.view.View;
 import android.view.Window;
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     //method for forgot password dialog
     public void forgotPassDia(Context context){
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
-        builder.setTitle("Forgot Password");
+        builder.setTitle(Html.fromHtml("<b>"+"Forgot Password"+"</b>"));
         builder.setIcon(getDrawable(R.drawable.forgotpass_icon));
         builder.setBackground(getDrawable(R.drawable.dialog_bg));
         builder.setMessage("\nEnter registered email address.");
@@ -114,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
     //method for Account Recovery Dialog
     public void accountRecovDia(Context context){
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
-        builder.setTitle("Account Recovery");
+        builder.setTitle(Html.fromHtml("<b>"+"Account Recovery"+"</b>"));
         builder.setIcon(R.drawable.accrecovery_icon);
         builder.setBackground(getDrawable(R.drawable.dialog_bg));
         builder.setMessage(getResources().getString(R.string.accRecovMsg));

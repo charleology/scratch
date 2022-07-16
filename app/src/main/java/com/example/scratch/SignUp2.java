@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -93,7 +94,7 @@ public class SignUp2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(SignUp2.this);
-                builder.setTitle("Terms and Conditions");
+                builder.setTitle(Html.fromHtml("<b>"+"Terms and Conditions"+"</b>"));
                 builder.setIcon(getDrawable(R.drawable.circlelogo_gradient));
                 builder.setBackground(getDrawable(R.drawable.dialog_bg));
                 builder.setMessage(getResources().getString(R.string.msg));

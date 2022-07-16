@@ -9,6 +9,7 @@
     <color name="white">#FF000000</color>
     <color name="whiteLogin">#FFffffff</color>
     <color name="nighty">#242526</color>
+    <color name="whitey">#FFFFFFFF</color>
 
     <!-- custom colors -->
     <color name="pink">#fb528b</color>
