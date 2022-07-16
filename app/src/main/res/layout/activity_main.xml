@@ -78,7 +78,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:hint="Password"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword" />
 
         <TextView
             android:id="@+id/forgotPassword"
