@@ -109,14 +109,14 @@ public class SignUp2 extends AppCompatActivity {
                 tnc_layout.addView(tnc_tv);
                 builder.setView(tnc_layout);
 
-                builder.setPositiveButton("SUBMIT", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton(Html.fromHtml("<b>"+"SUBMIT"+"</b>"), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //Codes here
                         signuploadingScreen();
                     }
                 });
-                builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                builder.setNegativeButton(Html.fromHtml("<b>"+"CANCEL"+"</b>"), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         //codes here

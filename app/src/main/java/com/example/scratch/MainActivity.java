@@ -97,14 +97,14 @@ public class MainActivity extends AppCompatActivity {
         recov_layout.addView(et_recovEmail);
         builder.setView(recov_layout);
 
-        builder.setPositiveButton("SUBMIT", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(Html.fromHtml("<b>"+"SUBMIT"+"</b>"), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //Codes here
                 accountRecovDia(context);
             }
         });
-        builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(Html.fromHtml("<b>"+"CANCEL"+"</b>"), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //codes here
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         builder.setBackground(getDrawable(R.drawable.dialog_bg));
         builder.setMessage(getResources().getString(R.string.accRecovMsg));
 
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(Html.fromHtml("<b>"+"OK"+"</b>"), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //Codes here
