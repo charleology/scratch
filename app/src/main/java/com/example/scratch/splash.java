@@ -1,6 +1,6 @@
 package com.example.scratch;
 
-import static com.example.scratch.MainActivity.setWindowFlag;
+//import static com.example.scratch.MainActivity.setWindowFlag;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -48,5 +48,8 @@ public class splash extends AppCompatActivity {
                 finish();
             }
         }, 3000);
+    }
+
+    private void setWindowFlag(splash splash, int flagTranslucentStatus, boolean b) {
     }
 }

@@ -18,5 +18,5 @@ public class ProcessSignUp extends AppCompatActivity {
         setContentView(R.layout.activity_process_sign_up);
         getSupportActionBar().hide();
 
-    }
+    }   
 }
