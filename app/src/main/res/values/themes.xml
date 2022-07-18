@@ -99,10 +99,6 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.Scratch.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.Scratch.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
     <style name="My_Widget.MaterialComponents.Chip.Choice" parent="Widget.MaterialComponents.Chip.Choice">
         <!-- Chip background color selector -->
         <item name="chipBackgroundColor">@color/bg_chip_state</item>
