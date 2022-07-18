@@ -56,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
         logIn = (Button) findViewById(R.id.btnLogin);
         forgotPass = (TextView) findViewById(R.id.forgotPassword);
 
+        logIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i2 = new Intent(MainActivity.this,Homepage.class);
+                startActivity(i2);
+            }
+        });
+
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
