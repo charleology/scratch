@@ -20,6 +20,11 @@
         android:theme="@style/Theme.Scratch"
         tools:targetApi="31">
         <activity
+            android:name=".MenuDrawer"
+            android:exported="false"
+            android:label="@string/title_activity_menu_drawer"
+            android:theme="@style/Theme.Scratch.NoActionBar" />
+        <activity
             android:name=".MainActivity2"
             android:exported="false"
             android:label="@string/title_activity_main2"

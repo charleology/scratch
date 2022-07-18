@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/filter_layout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/pink"
+        android:gravity="center"
+        android:paddingHorizontal="25dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Filter"
+            android:textColor="@color/whitey"
+            android:textSize="25sp"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_weight="4"
+            android:src="@drawable/ic_baseline_filter_alt_24"
+            app:tint="@color/whitey" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textSize="18sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:selectionRequired="true"
+            android:saveEnabled="true"
+            app:singleLine="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/dogChip"
+                android:layout_width="155dp"
+                android:layout_height="match_parent"
+                android:text="DOG"
+                android:textSize="17sp"
+                android:clickable="true"
+                style="@style/My_Widget.MaterialComponents.Chip.Choice"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/catChip"
+                android:layout_width="155dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:text="CAT"
+                style="@style/My_Widget.MaterialComponents.Chip.Choice"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textAlignment="center"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Estimated Age (Months)"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Minimum:"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/minAgeET"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:textSize="20sp"
+                    android:hint="1"
+                    android:textAlignment="center"
+                    android:background="@color/lightgray"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Maximum:"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id="@+id/maxAgeET"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:textSize="20sp"
+                    android:hint="3"
+                    android:textAlignment="center"
+                    android:background="@color/lightgray"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="18sp" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:singleLine="true"
+            app:selectionRequired="true"
+            android:saveEnabled="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/maleChip"
+                android:layout_width="155dp"
+                style="@style/My_Widget.MaterialComponents.Chip.Choice"
+                android:layout_height="match_parent"
+                android:text="MALE"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:textAlignment="center" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/femaleChip"
+                android:layout_width="155dp"
+                android:layout_height="match_parent"
+                style="@style/My_Widget.MaterialComponents.Chip.Choice"
+                android:text="FEMALE"
+                android:clickable="true"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textAlignment="center"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Show liked pets only"
+                android:textSize="18sp"
+                android:layout_weight="1"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/likedOnlySwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
