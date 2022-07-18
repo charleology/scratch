@@ -5,10 +5,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/nighty"
-    android:orientation="horizontal"
+    android:orientation="vertical"
+    android:weightSum="4"
     tools:context=".Homepage">
 
-    <include layout="@layout/activity_header"
-        android:id="@+id/headerView"/>
+    <include
+        android:id="@+id/headerView"
+        layout="@layout/activity_header"
+        android:layout_weight="1"
+        tools:ignore="IncludeLayoutParam" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.9" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3.1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.9"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="bottom">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/paw"
+                    app:tint="@color/black" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/cat_paw"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="Apply for the pet on screen."
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/applyBtn"
+            style="@style/pinkButton_style"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Apply" />
+
+    </LinearLayout>
 
 </LinearLayout>

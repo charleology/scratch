@@ -10,6 +10,7 @@
     android:paddingVertical="20dp"
     android:gravity="center"
     tools:context=".Header"
+    android:weightSum="3"
     android:id="@+id/headerLayout">
 
     <TextView
@@ -36,24 +37,24 @@
 
         <ImageView
             android:id="@+id/filterImgview"
-            android:layout_width="300dp"
-            android:layout_height="35dp"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:src="@drawable/ic_baseline_filter_alt_24"
             app:tint="@color/gray" />
 
         <ImageView
             android:id="@+id/messageImgview"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
+            android:layout_width="200dp"
+            android:layout_height="25dp"
             android:layout_weight="1"
             android:src="@drawable/ic_baseline_chat_bubble_24"
             app:tint="@color/gray" />
 
         <ImageView
             android:id="@+id/menuImgview"
-            android:layout_width="300dp"
-            android:layout_height="35dp"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
             android:src="@drawable/ic_round_menu_24"
             app:tint="@color/gray" />
