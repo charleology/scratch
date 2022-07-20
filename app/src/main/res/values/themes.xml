@@ -106,4 +106,7 @@
         <item name="android:textColor">@color/text_chip_state</item>
     </style>
 
+    <style name="Shape" parent="">
+        <item name="cornerSize">5%</item>
+    </style>
 </resources>

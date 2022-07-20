@@ -51,4 +51,7 @@ dependencies {
 
     //
    // implementation "dev.chrisbanes.insetter:insetter:0.6.0"
+
+    //for cardswipe
+    implementation 'com.github.Yalantis:Koloda-Android:v0.0.2-alpha'
 }
