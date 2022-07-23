@@ -1,7 +1,5 @@
 package com.example.scratch;
 
-import static com.example.scratch.Header.gotoMessage;
-
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;

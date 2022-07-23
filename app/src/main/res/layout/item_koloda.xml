@@ -11,7 +11,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/itemCard"
         android:layout_width="match_parent"
-        android:layout_height="550dp"
+        android:layout_height="500dp"
         android:layout_margin="20dp"
         app:cardCornerRadius="15dp"
         app:cardElevation="5dp">
@@ -19,18 +19,18 @@
         <FrameLayout
             android:id="@+id/frameSwipe"
             android:layout_width="match_parent"
-            android:layout_height="550dp">
+            android:layout_height="500dp">
 
             <ImageView
                 android:id="@+id/imageSwipe"
                 android:layout_width="fill_parent"
-                android:layout_height="550dp"
+                android:layout_height="500dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/two" />
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="550dp"
+                android:layout_height="500dp"
                 android:weightSum="2"
                 android:orientation="vertical">
 

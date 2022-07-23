@@ -20,9 +20,4 @@ public class Header extends AppCompatActivity {
 
     }
 
-    public static void gotoMessage(Context context){
-        Intent message = new Intent(context, MainActivity.class);
-        context.startActivity(message);
-    }
-
 }

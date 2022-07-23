@@ -8,10 +8,10 @@
     android:layout_gravity="center"
     android:background="@color/nighty"
     android:orientation="vertical"
-    android:paddingStart="10dp"
-    android:paddingTop="10dp"
-    android:paddingEnd="10dp"
-    android:paddingBottom="10dp"
+    android:paddingStart="5dp"
+    android:paddingTop="5dp"
+    android:paddingEnd="5dp"
+    android:paddingBottom="5dp"
     android:theme="@style/Theme.Scratch.noActionbarAndStatusBar"
 
     tools:context=".SignUp">
@@ -24,9 +24,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:orientation="vertical"
-            android:paddingVertical="10dp">
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/btnLayout"
@@ -54,7 +52,7 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:paddingStart="20dp"
-                android:paddingBottom="10dp">
+                android:paddingBottom="5dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -62,7 +60,7 @@
                     android:layout_weight="1"
                     android:text="Sign Up"
                     android:textColor="@color/black"
-                    android:textSize="40sp"
+                    android:textSize="35sp"
                     android:textStyle="bold|italic" />
 
                 <ImageView
@@ -86,7 +84,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="15dp"
+                android:layout_marginVertical="10dp"
                 android:orientation="horizontal">
 
                 <EditText
@@ -114,7 +112,7 @@
                 style="@style/textField_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="15dp"
+                android:layout_marginVertical="10dp"
                 android:hint="Password"
                 android:inputType="textPassword" />
 
@@ -123,7 +121,7 @@
                 style="@style/textField_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="15dp"
+                android:layout_marginVertical="10dp"
                 android:hint="Confirm Password"
                 android:inputType="textPassword" />
 
@@ -132,14 +130,14 @@
                 style="@style/textField_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="15dp"
+                android:layout_marginVertical="10dp"
                 android:hint="Email Address"
                 android:inputType="textEmailAddress" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="15dp"
+                android:layout_marginVertical="10dp"
                 android:orientation="horizontal">
 
                 <EditText
@@ -174,7 +172,7 @@
                 style="@style/textField_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="15dp"
+                android:layout_marginVertical="10dp"
                 android:hint="Contact Number"
                 android:inputType="phone" />
 
