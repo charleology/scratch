@@ -15,6 +15,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.ConditionVariable;
+import android.os.Handler;
 import android.text.Html;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -47,6 +48,8 @@ public class Homepage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
         getSupportActionBar().hide();
+
+        LoadingDialog loadingDialog = new LoadingDialog(Homepage.this);
 
         View view = findViewById(R.id.headerLayout);
         headerTitle = (TextView) findViewById(R.id.headerTitle);
