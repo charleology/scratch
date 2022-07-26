@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button signUp, logIn;
     TextView forgotPass;
+    LoadingDialog loadingDialog = new LoadingDialog(MainActivity.this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,7 +112,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //Codes here
-                accountRecovDia(context);
+                loadingDialog.startLoadingDialog();
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loadingDialog.dismissLoadingDialog();
+                        accountRecovDia(context);
+                    }
+                }, 3000);
+                //accountRecovDia(context);
             }
         });
         builder.setNegativeButton(Html.fromHtml("<b>"+"CANCEL"+"</b>"), new DialogInterface.OnClickListener() {
