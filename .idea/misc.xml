@@ -25,6 +25,7 @@
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_terms_conditions.xml" value="0.20692640692640693" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/app_bar_menu_drawer.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/content_menu_drawer.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/custom_appbar.xml" value="0.1875" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/drawer_layout.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/drop_down_items.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/filter_layout.xml" value="0.20692640692640693" />
@@ -34,7 +35,9 @@
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/fragment_slideshow.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/item_koloda.xml" value="0.20692640692640693" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/nav_header.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/nav_header_main.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/nav_header_menu_drawer.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/navheader.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/pink_button.xml" value="0.25" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/text_field.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/menu/activity_main2_drawer.xml" value="0.21052631578947367" />

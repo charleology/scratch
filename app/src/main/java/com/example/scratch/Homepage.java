@@ -20,13 +20,13 @@ import android.text.Html;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.ToggleButton;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.google.android.material.textfield.TextInputLayout;
 import com.yalantis.library.Koloda;
 
 import java.util.ArrayList;
@@ -73,7 +73,7 @@ public class Homepage extends AppCompatActivity {
         adapter = new SwipeAdapter(this, list);
         koloda.setAdapter(adapter);
 
-    }
+        }
 
 
     //Method for executing Filter Dialog
