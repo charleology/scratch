@@ -37,9 +37,9 @@ public class Homepage extends AppCompatActivity {
     private SwipeAdapter adapter;
     private List<Integer> list;
     Koloda koloda;
-
+    DrawerLayout drawerLayout;
     TextView headerTitle;
-    ImageView filterImgview, messageImgview, menuImgview;
+    ImageView filterImgview, messageImgview, menuImgview, closeDrawerBtn;
     Button applyBtn;
     ImageView heartIcon;
 
@@ -51,6 +51,7 @@ public class Homepage extends AppCompatActivity {
 
         LoadingDialog loadingDialog = new LoadingDialog(Homepage.this);
 
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         View view = findViewById(R.id.headerLayout);
         headerTitle = (TextView) findViewById(R.id.headerTitle);
         filterImgview = (ImageView) findViewById(R.id.filterImgview);
@@ -58,11 +59,26 @@ public class Homepage extends AppCompatActivity {
         menuImgview = (ImageView) findViewById(R.id.menuImgview);
         applyBtn = (Button) findViewById(R.id.applyBtn);
         heartIcon = (ImageView) findViewById(R.id.heartIcon);
+        closeDrawerBtn = (ImageView) findViewById(R.id.closeDrawerBtn);
 
         filterImgview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                filterDia(Homepage.this);
+               filterDia(Homepage.this);
+            }
+        });
+
+        menuImgview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(GravityCompat.END);
+            }
+        });
+
+        closeDrawerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.closeDrawer(GravityCompat.END);
             }
         });
 
