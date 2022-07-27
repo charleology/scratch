@@ -12,8 +12,10 @@
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/drawable/side_nav_bar.xml" value="0.2555" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/drawable/spin_background.xml" value="0.2555" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/drawable/tf_background.xml" value="0.176" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_about_the_office.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_about_us.xml" value="0.1" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_header.xml" value="0.21052631578947367" />
-        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_homepage.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_homepage.xml" value="0.18796296296296297" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_laoding_screen_extra.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_main.xml" value="0.20692640692640693" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/activity_menu_drawer.xml" value="0.21052631578947367" />
@@ -35,7 +37,7 @@
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/fragment_slideshow.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/item_koloda.xml" value="0.20692640692640693" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/nav_drawer_header.xml" value="0.20964912280701756" />
-        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/nav_drawer_layout.xml" value="0.21052631578947367" />
+        <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/nav_drawer_layout.xml" value="0.18796296296296297" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/nav_header.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/nav_header_main.xml" value="0.21052631578947367" />
         <entry key="..\:/Users/cnbelano/AndroidStudioProjects/scratch/app/src/main/res/layout/nav_header_menu_drawer.xml" value="0.21052631578947367" />

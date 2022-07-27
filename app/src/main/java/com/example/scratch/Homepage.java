@@ -40,7 +40,7 @@ public class Homepage extends AppCompatActivity {
     DrawerLayout drawerLayout;
     TextView headerTitle;
     ImageView filterImgview, messageImgview, menuImgview, closeDrawerBtn;
-    Button applyBtn;
+    Button applyBtn, aboutOfficeBtn, aboutUsBtn;
     ImageView heartIcon;
 
     @Override
@@ -60,6 +60,8 @@ public class Homepage extends AppCompatActivity {
         applyBtn = (Button) findViewById(R.id.applyBtn);
         heartIcon = (ImageView) findViewById(R.id.heartIcon);
         closeDrawerBtn = (ImageView) findViewById(R.id.closeDrawerBtn);
+        aboutOfficeBtn = (Button) findViewById(R.id.aboutOfficeBtn);
+        aboutUsBtn = (Button) findViewById(R.id.aboutUsBtn);
 
         filterImgview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +81,22 @@ public class Homepage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 drawerLayout.closeDrawer(GravityCompat.END);
+            }
+        });
+
+        aboutOfficeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Homepage.this, AboutTheOffice.class);
+                startActivity(i);
+            }
+        });
+
+        aboutUsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent z = new Intent(Homepage.this, AboutUs.class);
+                startActivity(z);
             }
         });
 
