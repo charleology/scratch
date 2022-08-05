@@ -44,19 +44,19 @@ public class EditProfile extends AppCompatActivity {
         newPasswordEt.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                final int right=2;
-                if(motionEvent.getAction()==MotionEvent.ACTION_UP){
-                    if(motionEvent.getRawX()>=newPasswordEt.getRight()-newPasswordEt.getCompoundDrawables()[right].getBounds().width()){
+                final int right = 2;
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    if (motionEvent.getRawX() >= newPasswordEt.getRight() - newPasswordEt.getCompoundDrawables()[right].getBounds().width()) {
                         int selection = newPasswordEt.getSelectionEnd();
-                        if (passwordVisible){
+                        if (passwordVisible) {
                             //drawable image
-                            newPasswordEt.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0, R.drawable.ic_baseline_visibility_24,0);
+                            newPasswordEt.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_24, 0);
                             //for hide password
                             newPasswordEt.setTransformationMethod(PasswordTransformationMethod.getInstance());
                             passwordVisible = false;
-                        }else{
+                        } else {
                             //drawable image
-                            newPasswordEt.setCompoundDrawablesRelativeWithIntrinsicBounds(0,0, R.drawable.ic_baseline_visibility_off_24,0);
+                            newPasswordEt.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_off_24, 0);
                             //for show password
                             newPasswordEt.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
                             passwordVisible = true;
@@ -69,14 +69,11 @@ public class EditProfile extends AppCompatActivity {
                 return false;
             }
         });
+    }
 
-        requestDeactTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                RequestDeactivationDialog requestDeactivationDialog = new RequestDeactivationDialog(EditProfile.this);
-                requestDeactivationDialog.show();
-            }
-        });
+    public void onRequestDeactivationPressed(View view){
+        RequestDeactivationDialog requestDeactivationDialog = new RequestDeactivationDialog(EditProfile.this);
+        requestDeactivationDialog.show();
     }
 
     public void back(View view){
