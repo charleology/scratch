@@ -3,6 +3,7 @@ package com.example.scratch;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -66,6 +67,14 @@ public class EditProfile extends AppCompatActivity {
                 }
 
                 return false;
+            }
+        });
+
+        requestDeactTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RequestDeactivationDialog requestDeactivationDialog = new RequestDeactivationDialog(EditProfile.this);
+                requestDeactivationDialog.show();
             }
         });
     }
