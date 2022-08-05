@@ -38,7 +38,7 @@ public class Homepage extends AppCompatActivity {
     private List<Integer> list;
     Koloda koloda;
     DrawerLayout drawerLayout;
-    TextView headerTitle;
+    TextView headerTitle, editProfileTv;
     ImageView filterImgview, messageImgview, menuImgview, closeDrawerBtn;
     Button applyBtn, aboutOfficeBtn, aboutUsBtn;
     ImageView heartIcon;
@@ -62,6 +62,15 @@ public class Homepage extends AppCompatActivity {
         closeDrawerBtn = (ImageView) findViewById(R.id.closeDrawerBtn);
         aboutOfficeBtn = (Button) findViewById(R.id.aboutOfficeBtn);
         aboutUsBtn = (Button) findViewById(R.id.aboutUsBtn);
+        editProfileTv = (TextView) findViewById(R.id.editProfileTv);
+
+        editProfileTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Homepage.this, EditProfile.class);
+                startActivity(i);
+            }
+        });
 
         filterImgview.setOnClickListener(new View.OnClickListener() {
             @Override
