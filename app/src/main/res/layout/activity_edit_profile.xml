@@ -167,11 +167,12 @@
                     android:id="@+id/deactTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onRequestDeactivationPressed"
                     android:text="Deactivate"
                     android:textColor="@color/pink"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:onClick="onRequestDeactivationPressed"/>
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <View
                     android:layout_width="match_parent"
@@ -213,11 +214,12 @@
                     android:id="@+id/deleteTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="onRequestDeactivationPressed"
                     android:text="Delete"
-                    android:textStyle="bold"
                     android:textColor="@color/pink"
                     android:textSize="16sp"
-                    android:onClick="onRequestDeactivationPressed"/>
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
 
                 <View
                     android:layout_width="match_parent"
