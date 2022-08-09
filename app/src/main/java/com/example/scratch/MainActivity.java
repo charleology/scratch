@@ -7,12 +7,14 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
 import android.text.InputType;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -23,13 +25,13 @@ import android.widget.TextView;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
-import org.w3c.dom.Text;
-
 public class MainActivity extends AppCompatActivity {
 
     Button signUp, logIn;
     TextView forgotPass;
+    EditText tfloginPassword;
     LoadingDialog loadingDialog = new LoadingDialog(MainActivity.this);
+    static boolean passwordVisible;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         signUp = (Button) findViewById(R.id.btnSignup);
         logIn = (Button) findViewById(R.id.btnLogin);
         forgotPass = (TextView) findViewById(R.id.forgotPassword);
+        tfloginPassword = (EditText) findViewById(R.id.tfloginPassword);
 
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +81,35 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 forgotPassDia(MainActivity.this);
+            }
+        });
+
+        //for show/hide pass
+        tfloginPassword.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                final int Right = 2;
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    if (motionEvent.getRawX() >= tfloginPassword.getRight() - tfloginPassword.getCompoundDrawables()[Right].getBounds().width()) {
+                        int selection = tfloginPassword.getSelectionEnd();
+                        if (passwordVisible) {
+                            //drawable image
+                            tfloginPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_24, 0);
+                            //for hide password
+                            tfloginPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                            passwordVisible = false;
+                        } else {
+                            //drawable image
+                            tfloginPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_off_24, 0);
+                            //for show password
+                            tfloginPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                            passwordVisible = true;
+                        }
+                        tfloginPassword.setSelection(selection);
+                        return true;
+                    }
+                }
+                return false;
             }
         });
     }
@@ -161,4 +193,29 @@ public class MainActivity extends AppCompatActivity {
         }
         win.setAttributes(winParams);
     }
+
+    /*public boolean showHidePassword(EditText editText, MotionEvent motionEvent, Boolean passwordVisible, int Right){
+        boolean res = false;
+        if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+            if (motionEvent.getRawX() >= editText.getRight() - editText.getCompoundDrawables()[Right].getBounds().width()) {
+                int selection = editText.getSelectionEnd();
+                if (passwordVisible) {
+                    //drawable image
+                    editText.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_24, 0);
+                    //for hide password
+                    editText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    passwordVisible = false;
+                } else {
+                    //drawable image
+                    editText.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_off_24, 0);
+                    //for show password
+                    editText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    passwordVisible = true;
+                }
+                editText.setSelection(selection);
+                res = true;
+            }
+        }
+        return res;
+    }*/
 }
