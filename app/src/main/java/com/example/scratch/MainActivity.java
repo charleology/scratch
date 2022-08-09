@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i2 = new Intent(MainActivity.this,Homepage.class);
                 startActivity(i2);
+                overridePendingTransition(R.anim.fade_slide_up, R.anim.abc_fade_out);
             }
         });
 
