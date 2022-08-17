@@ -122,15 +122,15 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/newAddressEt"
-            style="@style/textField_style"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:layout_marginVertical="10dp"
-            android:gravity="start"
-            android:hint="Address"
-            android:inputType="textMultiLine"
-            android:paddingVertical="20dp" />
+        android:id="@+id/newAddressEt"
+        style="@style/textField_style"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginVertical="10dp"
+        android:gravity="start"
+        android:hint="Address"
+        android:inputType="textMultiLine"
+        android:paddingVertical="20dp" />
 
         <Spinner
             android:id="@+id/newBarangaySp"

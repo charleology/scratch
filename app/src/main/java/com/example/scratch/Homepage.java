@@ -72,13 +72,6 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
-        filterImgview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-               filterDia(Homepage.this);
-            }
-        });
-
         menuImgview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,26 +109,30 @@ public class Homepage extends AppCompatActivity {
         adapter = new SwipeAdapter(this, list);
         koloda.setAdapter(adapter);
 
-        }
-
+    }
 
     //Method for executing Filter Dialog
-    public void filterDia(Context context){
+    public void filterDia(Context context) {
         MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
         builder.setBackground(getDrawable(R.drawable.dialog_bg));
         builder.setView(R.layout.filter_layout);
-        builder.setPositiveButton(Html.fromHtml("<b>"+"APPLY"+"</b>"), new DialogInterface.OnClickListener() {
+        builder.setPositiveButton(Html.fromHtml("<b>" + "APPLY" + "</b>"), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //Codes here
             }
         });
-        builder.setNegativeButton(Html.fromHtml("<b>"+"CANCEL"+"</b>"), new DialogInterface.OnClickListener() {
+        builder.setNegativeButton(Html.fromHtml("<b>" + "CANCEL" + "</b>"), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 //codes here
             }
         });
         builder.show();
+    }
+
+    public void onFilterPressed(View view){
+        Intent i = new Intent(Homepage.this, Filter.class);
+        startActivity(i);
     }
 }

@@ -27,7 +27,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="500dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/two" />
+                android:src="@drawable/circlelogo_white"
+                android:background="@color/lightgray"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -48,8 +49,7 @@
                         android:id="@+id/genderSign"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/gender_female"
-                        app:tint="@color/whitey"/>
+                        android:src="@drawable/genderfemale"/>
 
                 </LinearLayout>
 
@@ -74,10 +74,12 @@
                             android:id="@+id/animalFace"
                             android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:src="@drawable/dog_face"
-                            app:tint="@color/whitey"/>
+                            android:src="@drawable/dogface"/>
 
                         <TextView
+                            android:paddingStart="3dp"
+                            android:shadowColor="@color/darkgray"
+                            android:shadowRadius="5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Blue / Red / Green / Zaido"
@@ -97,8 +99,7 @@
                             android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:clickable="true"
-                            android:src="@drawable/heart_icon"
-                            app:tint="@color/whitey"
+                            android:src="@drawable/hearticon"
                             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
 
