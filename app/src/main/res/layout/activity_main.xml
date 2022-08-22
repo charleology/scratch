@@ -9,7 +9,7 @@
     android:id="@+id/loginLayout"
     android:background="@color/nighty"
     android:theme="@style/Theme.Scratch.noActionbarAndStatusBar">
-   
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="260dp"
@@ -80,7 +80,7 @@
             android:layout_marginTop="20dp"
             android:hint="Password"
             android:inputType="textPassword"
-            android:drawableRight="@drawable/ic_baseline_visibility_24"/>
+            android:drawableEnd="@drawable/ic_baseline_visibility_24"/>
 
         <TextView
             android:id="@+id/forgotPassword"
