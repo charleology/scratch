@@ -50,6 +50,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="3"
                 android:text="Filter"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold" />
@@ -99,12 +100,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Pet Type"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="27sp" />
+                    android:textSize="20sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <com.google.android.material.chip.ChipGroup
@@ -160,8 +163,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Estimated Age"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="27sp" />
+                    android:textSize="20sp" />
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
@@ -171,7 +175,8 @@
 
                     <com.google.android.material.chip.ChipGroup
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
                         android:layout_marginTop="10dp"
                         android:layout_weight="2"
                         android:saveEnabled="true"
@@ -233,12 +238,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Gender"
+                    android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="27sp" />
+                    android:textSize="20sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:orientation="vertical">
 
                     <com.google.android.material.chip.ChipGroup
@@ -286,22 +293,24 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:weightSum="2"
                 android:layout_marginVertical="10dp"
-                android:orientation="vertical">
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
                     android:text="Show only liked pets."
                     android:textColor="@color/black"
-                    android:textSize="27sp" />
+                    android:textSize="20sp" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/likedOnlySwitch"
                     android:paddingEnd="5dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
+                    android:layout_weight="1.5" />
 
             </LinearLayout>
 
@@ -312,16 +321,16 @@
             android:layout_height="match_parent"
             android:layout_weight="1.75"
             android:orientation="horizontal"
-            android:gravity="end"
             android:paddingHorizontal="15dp">
 
             <Button
                 android:id="@+id/filterApplyBtn"
-                style="@style/pinkButton_style"
-                android:layout_width="150dp"
+                style="@style/blackButton_style"
+                android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
-                android:text="APPLY"/>
+                android:text="APPLY"
+                android:textColor="@color/white"/>
 
         </LinearLayout>
 
