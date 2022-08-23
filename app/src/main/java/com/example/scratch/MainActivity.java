@@ -7,19 +7,18 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
 import android.text.InputType;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -32,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     EditText tfloginPassword;
     LoadingDialog loadingDialog = new LoadingDialog(MainActivity.this);
     static boolean passwordVisible;
+    ImageView showHideIv;
+    int ctr = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         logIn = (Button) findViewById(R.id.btnLogin);
         forgotPass = (TextView) findViewById(R.id.forgotPassword);
         tfloginPassword = (EditText) findViewById(R.id.tfloginPassword);
+        showHideIv = (ImageView) findViewById(R.id.showHideIv);
 
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,34 +87,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //for show/hide pass
-        tfloginPassword.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                final int Right = 2;
-                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-                    if (motionEvent.getRawX() >= tfloginPassword.getRight() - tfloginPassword.getCompoundDrawables()[Right].getBounds().width()) {
-                        int selection = tfloginPassword.getSelectionEnd();
-                        if (passwordVisible) {
-                            //drawable image
-                            tfloginPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_24, 0);
-                            //for hide password
-                            tfloginPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                            passwordVisible = false;
-                        } else {
-                            //drawable image
-                            tfloginPassword.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_off_24, 0);
-                            //for show password
-                            tfloginPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                            passwordVisible = true;
-                        }
-                        tfloginPassword.setSelection(selection);
-                        return true;
-                    }
-                }
-                return false;
-            }
-        });
     }
 
     //method for forgot password dialog
@@ -193,6 +167,19 @@ public class MainActivity extends AppCompatActivity {
             winParams.flags &= ~bits;
         }
         win.setAttributes(winParams);
+    }
+
+    public void onShowHide(View view){
+        if (ctr == 0){
+            new Utility().passwordFieldTransformer(tfloginPassword, true);
+            showHideIv.setImageDrawable(getDrawable(R.drawable.ic_baseline_visibility_off_24));
+            ctr++;
+        }
+        else {
+            new Utility().passwordFieldTransformer(tfloginPassword, false);
+            showHideIv.setImageDrawable(getDrawable(R.drawable.ic_baseline_visibility_24));
+            ctr--;
+        }
     }
 
     /*public boolean showHidePassword(EditText editText, MotionEvent motionEvent, Boolean passwordVisible, int Right){

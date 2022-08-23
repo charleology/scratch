@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:id="@+id/loginLayout"
     android:background="@color/nighty"
-    android:theme="@style/Theme.Scratch.noActionbarAndStatusBar">
+    android:orientation="vertical"
+    android:theme="@style/Theme.Scratch.noActionbarAndStatusBar"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,8 +20,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
             android:layout_marginBottom="30dp"
+            android:layout_weight="2"
             android:orientation="vertical">
 
             <TextView
@@ -29,11 +29,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_marginStart="20dp"
+                android:paddingEnd="10dp"
                 android:text="Log-In or Sign-Up"
                 android:textColor="@color/whiteLogin"
                 android:textSize="25sp"
-                android:textStyle="bold|italic"
-                android:paddingEnd="10dp"/>
+                android:textStyle="bold|italic" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -50,8 +50,8 @@
         <ImageView
             android:layout_width="90dp"
             android:layout_height="90dp"
-            android:layout_weight="1"
             android:layout_marginBottom="20dp"
+            android:layout_weight="1"
             android:src="@drawable/circlelogo_white" />
 
     </LinearLayout>
@@ -60,27 +60,47 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingHorizontal="20dp">
+        android:gravity="center"
+        android:paddingHorizontal="25dp">
 
         <EditText
             android:id="@+id/tfloginEmail"
+            style="@style/textField_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/textField_style"
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
             android:hint="Email Address" />
 
-        <EditText
-            android:id="@+id/tfloginPassword"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/textField_style"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:drawableEnd="@drawable/ic_baseline_visibility_24"/>
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <EditText
+                android:id="@+id/tfloginPassword"
+                style="@style/passField_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:layout_gravity="center"
+                android:hint="Password"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/showHideIv"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_weight="1.7"
+                android:onClick="onShowHide"
+                android:src="@drawable/ic_baseline_visibility_24"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/forgotPassword"
@@ -99,10 +119,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="40dp"
-        android:paddingHorizontal="20dp"
         android:gravity="center|bottom"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="40dp">
 
         <Button
             android:id="@+id/btnLogin"
