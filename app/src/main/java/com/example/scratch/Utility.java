@@ -1,6 +1,8 @@
 package com.example.scratch;
 
+import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 
 public class Utility {

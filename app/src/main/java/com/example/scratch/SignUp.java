@@ -39,12 +39,12 @@ import java.util.Calendar;
 
 public class SignUp extends AppCompatActivity {
 
-    ImageView backButton;
+    ImageView backButton, signUpPassHide, signUpConPassHide;
     static EditText fieldFname, fieldLname, fieldPassword, fieldConfirmpass,
             fieldEmail, fieldDBirthday, fieldContact;
     Spinner spinGender;
     Button next;
-    int year, month, day;
+    int ctr = 0, ctr1 = 0;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -63,6 +63,8 @@ public class SignUp extends AppCompatActivity {
         fieldConfirmpass = (EditText) findViewById(R.id.tfsignupConPassword);
         fieldEmail = (EditText) findViewById(R.id.tfsignupEmail);
         fieldContact = (EditText) findViewById(R.id.tfsignupContact);
+        signUpPassHide = (ImageView) findViewById(R.id.signUpPassHide);
+        signUpConPassHide = (ImageView) findViewById(R.id.signUpConPassHide);
 
         String[] gen = getResources().getStringArray(R.array.Gender);
 
@@ -147,4 +149,29 @@ public class SignUp extends AppCompatActivity {
         win.setAttributes(winParams);
     }
 
+    public void onPassShowHide(View view){
+        if (ctr == 0){
+            new Utility().passwordFieldTransformer(fieldPassword, true);
+            signUpPassHide.setImageDrawable(getDrawable(R.drawable.ic_baseline_visibility_24));
+            ctr++;
+        }
+        else {
+            new Utility().passwordFieldTransformer(fieldPassword, false);
+            signUpPassHide.setImageDrawable(getDrawable(R.drawable.ic_baseline_visibility_off_24));
+            ctr--;
+        }
+    }
+
+    public void onConPassShowHide(View view){
+        if (ctr == 0){
+            new Utility().passwordFieldTransformer(fieldConfirmpass, true);
+            signUpConPassHide.setImageDrawable(getDrawable(R.drawable.ic_baseline_visibility_24));
+            ctr++;
+        }
+        else {
+            new Utility().passwordFieldTransformer(fieldConfirmpass, false);
+            signUpConPassHide.setImageDrawable(getDrawable(R.drawable.ic_baseline_visibility_off_24));
+            ctr--;
+        }
+    }
 }

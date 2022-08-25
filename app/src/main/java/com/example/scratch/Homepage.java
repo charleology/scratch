@@ -40,7 +40,7 @@ public class Homepage extends AppCompatActivity {
     DrawerLayout drawerLayout;
     TextView headerTitle, editProfileTv;
     ImageView filterImgview, messageImgview, menuImgview, closeDrawerBtn;
-    Button applyBtn, aboutOfficeBtn, aboutUsBtn;
+    Button applyBtn, aboutOfficeBtn, aboutUsBtn, adoptionHistoryBtn;
     ImageView heartIcon;
 
     @Override
@@ -63,6 +63,7 @@ public class Homepage extends AppCompatActivity {
         aboutOfficeBtn = (Button) findViewById(R.id.aboutOfficeBtn);
         aboutUsBtn = (Button) findViewById(R.id.aboutUsBtn);
         editProfileTv = (TextView) findViewById(R.id.editProfileTv);
+        adoptionHistoryBtn = (Button) findViewById(R.id.adoptionHistoryBtn);
 
         editProfileTv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,28 +112,13 @@ public class Homepage extends AppCompatActivity {
 
     }
 
-    //Method for executing Filter Dialog
-    public void filterDia(Context context) {
-        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
-        builder.setBackground(getDrawable(R.drawable.dialog_bg));
-        builder.setView(R.layout.filter_layout);
-        builder.setPositiveButton(Html.fromHtml("<b>" + "APPLY" + "</b>"), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                //Codes here
-            }
-        });
-        builder.setNegativeButton(Html.fromHtml("<b>" + "CANCEL" + "</b>"), new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                //codes here
-            }
-        });
-        builder.show();
-    }
-
     public void onFilterPressed(View view){
         Intent i = new Intent(Homepage.this, Filter.class);
+        startActivity(i);
+    }
+
+    public void onPressedAdoptionHistory(View view){
+        Intent i =  new Intent(Homepage.this, AdoptionHistory.class);
         startActivity(i);
     }
 }

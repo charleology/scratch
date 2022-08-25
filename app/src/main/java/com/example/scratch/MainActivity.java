@@ -13,10 +13,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
 import android.text.InputType;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -30,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     TextView forgotPass;
     EditText tfloginPassword;
     LoadingDialog loadingDialog = new LoadingDialog(MainActivity.this);
-    static boolean passwordVisible;
     ImageView showHideIv;
     int ctr = 0;
 
@@ -86,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
                 forgotPassDia(MainActivity.this);
             }
         });
-
     }
 
     //method for forgot password dialog
@@ -172,38 +174,13 @@ public class MainActivity extends AppCompatActivity {
     public void onShowHide(View view){
         if (ctr == 0){
             new Utility().passwordFieldTransformer(tfloginPassword, true);
-            showHideIv.setImageDrawable(getDrawable(R.drawable.ic_baseline_visibility_off_24));
+            showHideIv.setImageDrawable(getDrawable(R.drawable.ic_baseline_visibility_24));
             ctr++;
         }
         else {
             new Utility().passwordFieldTransformer(tfloginPassword, false);
-            showHideIv.setImageDrawable(getDrawable(R.drawable.ic_baseline_visibility_24));
+            showHideIv.setImageDrawable(getDrawable(R.drawable.ic_baseline_visibility_off_24));
             ctr--;
         }
     }
-
-    /*public boolean showHidePassword(EditText editText, MotionEvent motionEvent, Boolean passwordVisible, int Right){
-        boolean res = false;
-        if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
-            if (motionEvent.getRawX() >= editText.getRight() - editText.getCompoundDrawables()[Right].getBounds().width()) {
-                int selection = editText.getSelectionEnd();
-                if (passwordVisible) {
-                    //drawable image
-                    editText.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_24, 0);
-                    //for hide password
-                    editText.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                    passwordVisible = false;
-                } else {
-                    //drawable image
-                    editText.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.ic_baseline_visibility_off_24, 0);
-                    //for show password
-                    editText.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                    passwordVisible = true;
-                }
-                editText.setSelection(selection);
-                res = true;
-            }
-        }
-        return res;
-    }*/
 }
