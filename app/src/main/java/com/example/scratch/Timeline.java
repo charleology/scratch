@@ -18,16 +18,17 @@ import com.baoyachi.stepview.VerticalStepView;
 
 import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Timeline extends AppCompatActivity {
 
     DrawerLayout timelineDrawer;
     ImageView filterImgview, menuImgview, closeDrawerBtn;
-    TextView headerTitle;
-    Button timelineCancelBtn, timelineSetAppBtn, timelineSetAppCancelBtn;
+    TextView headerTitle, timelineHeader, timelineBody;
+    Button timelineCancelBtn, timelineSetAppBtn, timelineSetAppCancelBtn, timelineHomeBtn;
     VerticalStepView timelineStepView;
-    LinearLayout timelineCancelLayout, timelineSetAppLayout;
+    LinearLayout timelineCancelLayout, timelineSetAppLayout, timelineHomeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,34 +42,36 @@ public class Timeline extends AppCompatActivity {
         headerTitle = (TextView) findViewById(R.id.headerTitle);
         menuImgview = (ImageView) findViewById(R.id.menuImgview);
         closeDrawerBtn = (ImageView) findViewById(R.id.closeDrawerBtn);
-        timelineCancelBtn = (Button) findViewById(R.id.timelineCancelBtn);
+        timelineHeader = (TextView) findViewById(R.id.timelineHeader);
+        timelineBody = (TextView) findViewById(R.id.timelineBody);
         timelineStepView = (VerticalStepView) findViewById(R.id.timelineStepview);
         timelineCancelLayout = (LinearLayout) findViewById(R.id.timelineCancelLayout);
         timelineSetAppLayout = (LinearLayout) findViewById(R.id.timelineSetAppLayout);
+        timelineHomeLayout = (LinearLayout) findViewById(R.id.timelineHomeLayout);
+        timelineCancelBtn = (Button) findViewById(R.id.timelineCancelBtn);
         timelineSetAppBtn = (Button) findViewById(R.id.timelineSetAppBtn);
         timelineSetAppCancelBtn = (Button) findViewById(R.id.timelineSetAppCancelBtn);
+        timelineHomeBtn = (Button) findViewById(R.id.timelineHomeBtn);
 
         filterImgview.setVisibility(View.INVISIBLE);
         headerTitle.setText("Progress");
 
+        //Button Layout initial displays
         timelineCancelLayout.setVisibility(View.VISIBLE);
         timelineSetAppLayout.setVisibility(View.GONE);
+        timelineHomeLayout.setVisibility(View.GONE);
+        timelineHeader.setText(R.string.congrats);
+        timelineBody.setText(R.string.sendReqBody);
 
-        List<String> sources = new ArrayList<>();
-        sources.add("Send Request");
-        sources.add("Awaiting Approval");
-        sources.add("Request Approved");
-        sources.add("Set Appointment");
-        sources.add("Appointment Confirmed");
-        sources.add("Adoption Successful");
+        //StepView
+        List<String> sources = Arrays.asList(getResources().getStringArray(R.array.steps));
 
-        timelineStepView.setStepsViewIndicatorComplectingPosition(0)
-                .reverseDraw(false)
+        timelineStepView.reverseDraw(false)
                 .setStepViewTexts(sources)
                 .setLinePaddingProportion(0.65f)
                 //complete
                 .setStepsViewIndicatorCompletedLineColor(ContextCompat.getColor(this, R.color.pink))
-                .setStepViewComplectedTextColor(Color.BLACK)
+                .setStepViewComplectedTextColor(ContextCompat.getColor(this, R.color.black))
                 .setStepsViewIndicatorCompleteIcon(getDrawable(R.drawable.task_complete))
                 //uncompleted
                 .setStepViewUnComplectedTextColor(ContextCompat.getColor(this, R.color.gray))
@@ -79,24 +82,8 @@ public class Timeline extends AppCompatActivity {
                 .setStepsViewIndicatorUnCompletedLineColor(ContextCompat.getColor(this, R.color.gray))
                 .setTextSize(13);
 
-    }
-
-    public void onCancelPressed(View view){
-        timelineCancelLayout.setVisibility(View.GONE);
-        timelineSetAppLayout.setVisibility(View.VISIBLE);
-        timelineStepView.setStepsViewIndicatorComplectingPosition(3);
-    }
-
-    public void onSetAppPressed(View view){
-        timelineCancelLayout.setVisibility(View.VISIBLE);
-        timelineSetAppLayout.setVisibility(View.GONE);
-        timelineStepView.setStepsViewIndicatorComplectingPosition(5);
-    }
-
-    public void onSetAppCancelPressed(View view){
-        timelineCancelLayout.setVisibility(View.VISIBLE);
-        timelineSetAppLayout.setVisibility(View.GONE);
         timelineStepView.setStepsViewIndicatorComplectingPosition(0);
+
     }
 
     public void onPressedMenu(View view){

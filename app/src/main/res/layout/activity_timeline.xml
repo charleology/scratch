@@ -51,19 +51,23 @@
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="10dp">
 
+                <!--Header-->
                 <TextView
+                    android:id="@+id/timelineHeader"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
-                    android:text="Congratulations!"
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="28sp"
                     android:textStyle="bold" />
 
+                <!--Body-->
                 <TextView
+                    android:id="@+id/timelineBody"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Your request is under review by the City Veterinary Office. Please wait for apporval status within 1 to 3 working days."
+                    android:text=""
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
@@ -72,6 +76,7 @@
 
         </LinearLayout>
 
+        <!--Cancel Button Layout-->
         <LinearLayout
             android:id="@+id/timelineCancelLayout"
             android:layout_width="match_parent"
@@ -81,8 +86,8 @@
             android:orientation="horizontal"
             android:paddingHorizontal="15dp">
 
+            <!-- Cancel Button-->
             <Button
-                android:onClick="onCancelPressed"
                 android:id="@+id/timelineCancelBtn"
                 style="@style/pinkButton_style"
                 android:layout_width="350dp"
@@ -92,6 +97,7 @@
 
         </LinearLayout>
 
+        <!--Set Appointment/Cancel Button Layout-->
         <LinearLayout
             android:id="@+id/timelineSetAppLayout"
             android:layout_width="match_parent"
@@ -102,8 +108,8 @@
             android:weightSum="2"
             android:paddingHorizontal="15dp">
 
+            <!-- Cancel Button-->
             <Button
-                android:onClick="onSetAppCancelPressed"
                 android:id="@+id/timelineSetAppCancelBtn"
                 style="@style/orangeButton_style"
                 android:layout_width="350dp"
@@ -112,8 +118,8 @@
                 android:layout_marginEnd="7.5dp"
                 android:text="Cancel" />
 
+            <!-- Set Appointment Button-->
             <Button
-                android:onClick="onSetAppPressed"
                 android:id="@+id/timelineSetAppBtn"
                 style="@style/pinkButton_style"
                 android:layout_width="350dp"
@@ -122,6 +128,26 @@
                 android:layout_marginStart="7.5dp"
                 android:text="Set Appointment"
                 android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <!--Home Button Layout-->
+        <LinearLayout
+            android:id="@+id/timelineHomeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3.3"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="15dp">
+
+            <!-- Home Button-->
+            <Button
+                android:id="@+id/timelineHomeBtn"
+                style="@style/circleHomeButton_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HOME"/>
 
         </LinearLayout>
 
