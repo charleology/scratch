@@ -19,8 +19,10 @@
         android:layout_height="50dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
+        android:onClick="onPressedCloseDrawer"
         android:src="@drawable/ic_round_chevron_right_24"
-        app:tint="@color/whitey" />
+        app:tint="@color/whitey"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -64,6 +66,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:onClick="onEditProfilePressed"
             android:id="@+id/editProfileTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -102,6 +105,7 @@
                 android:text="ADOPTION HISTORY" />
 
             <Button
+                android:onClick="onPressedAboutOffice"
                 android:id="@+id/aboutOfficeBtn"
                 style="@style/orangeButton_style"
                 android:layout_width="wrap_content"
@@ -110,6 +114,7 @@
                 android:text="ABOUT THE OFFICE" />
 
             <Button
+                android:onClick="onPressedAboutUs"
                 android:id="@+id/aboutUsBtn"
                 style="@style/orangeButton_style"
                 android:layout_width="wrap_content"

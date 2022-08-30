@@ -16,7 +16,6 @@
         android:weightSum="4">
 
         <include
-            android:id="@+id/headerView"
             layout="@layout/activity_header"
             android:layout_weight="1"
             tools:ignore="IncludeLayoutParam" />
@@ -81,6 +80,7 @@
             </LinearLayout>
 
             <Button
+                android:onClick="onPressedApply"
                 android:id="@+id/applyBtn"
                 style="@style/pinkButton_style"
                 android:layout_width="350dp"

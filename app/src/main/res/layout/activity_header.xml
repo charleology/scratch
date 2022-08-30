@@ -40,7 +40,7 @@
             android:layout_width="200dp"
             android:layout_height="30dp"
             android:layout_weight="1"
-            android:onClick="onFilterPressed"
+            android:onClick="onPressedFilter"
             android:src="@drawable/ic_baseline_filter_alt_24"
             app:tint="@color/gray"
             tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
@@ -54,6 +54,7 @@
             app:tint="@color/gray" />
 
         <ImageView
+            android:onClick="onPressedMenu"
             android:id="@+id/menuImgview"
             android:layout_width="200dp"
             android:layout_height="30dp"

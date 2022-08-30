@@ -65,44 +65,6 @@ public class Homepage extends AppCompatActivity {
         editProfileTv = (TextView) findViewById(R.id.editProfileTv);
         adoptionHistoryBtn = (Button) findViewById(R.id.adoptionHistoryBtn);
 
-        editProfileTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Homepage.this, EditProfile.class);
-                startActivity(i);
-            }
-        });
-
-        menuImgview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                drawerLayout.openDrawer(GravityCompat.END);
-            }
-        });
-
-        closeDrawerBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                drawerLayout.closeDrawer(GravityCompat.END);
-            }
-        });
-
-        aboutOfficeBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Homepage.this, AboutTheOffice.class);
-                startActivity(i);
-            }
-        });
-
-        aboutUsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent z = new Intent(Homepage.this, AboutUs.class);
-                startActivity(z);
-            }
-        });
-
         //Koloda swipe
         koloda = findViewById(R.id.koloda);
         list = new ArrayList<>();
@@ -112,13 +74,42 @@ public class Homepage extends AppCompatActivity {
 
     }
 
-    public void onFilterPressed(View view){
+    public void onPressedMenu(View view){
+        drawerLayout.openDrawer(GravityCompat.END);
+    }
+
+    public void onPressedCloseDrawer(View view){
+        drawerLayout.closeDrawer(GravityCompat.END);
+    }
+
+    public void onPressedFilter(View view){
         Intent i = new Intent(Homepage.this, Filter.class);
         startActivity(i);
+        finish();
     }
 
     public void onPressedAdoptionHistory(View view){
         Intent i =  new Intent(Homepage.this, AdoptionHistory.class);
+        startActivity(i);
+    }
+
+    public void onPressedAboutOffice(View view){
+        Intent i = new Intent(Homepage.this, AboutTheOffice.class);
+        startActivity(i);
+    }
+
+    public void onPressedAboutUs(View view){
+        Intent z = new Intent(Homepage.this, AboutUs.class);
+        startActivity(z);
+    }
+
+    public void onEditProfilePressed(View view){
+        Intent i = new Intent(Homepage.this, EditProfile.class);
+        startActivity(i);
+    }
+
+    public void onPressedApply(View view){
+        Intent i = new Intent(Homepage.this, Timeline.class);
         startActivity(i);
     }
 }
