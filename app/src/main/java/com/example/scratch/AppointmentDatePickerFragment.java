@@ -1,26 +1,22 @@
 package com.example.scratch;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
 
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 
 public class AppointmentDatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
 
     private DatePickerDialog dpd;
-
-    final int MAX_SELECTABLE_DATE_IN_FUTURE = 365; // 365 days into the future max
 
     public void onCreate(@NonNull Bundle savedInstanceState) {
 
@@ -39,7 +35,7 @@ public class AppointmentDatePickerFragment extends DialogFragment implements Dat
         ArrayList<Calendar> weekdays = new ArrayList<Calendar>();
         Calendar day = Calendar.getInstance();
         day.add(Calendar.DAY_OF_YEAR, 2);
-        for (int i = 0; i < MAX_SELECTABLE_DATE_IN_FUTURE; i++) {
+        for (int i = 0; i < 11; i++) {
             if (day.get(Calendar.DAY_OF_WEEK) != Calendar.SATURDAY && day.get(Calendar.DAY_OF_WEEK) != Calendar.SUNDAY) {
                 Calendar d = (Calendar) day.clone();
                 weekdays.add(d);
@@ -48,17 +44,33 @@ public class AppointmentDatePickerFragment extends DialogFragment implements Dat
         }
         Calendar[] weekdayDays = weekdays.toArray(new Calendar[weekdays.size()]);
         dpd.setSelectableDays(weekdayDays);
+        dpd.setAccentColor(ContextCompat.getColor(getContext(),R.color.pink));
+
+        int nightModeFlags =
+                getContext().getResources().getConfiguration().uiMode &
+                        Configuration.UI_MODE_NIGHT_MASK;
+        switch (nightModeFlags) {
+            case Configuration.UI_MODE_NIGHT_YES:
+                dpd.setThemeDark(true);
+                break;
+
+            case Configuration.UI_MODE_NIGHT_NO:
+                dpd.setThemeDark(false);
+                break;
+
+            case Configuration.UI_MODE_NIGHT_UNDEFINED:
+                dpd.setThemeDark(true);
+                break;
+        }
+
         dpd.show(requireFragmentManager(), "Datepickerdialog");
 
     }
-
-    ;
 
     @Override
     public void onDateSet(DatePickerDialog view, int year, int month, int day) {
         String date = "You picked the following date: " + day + "/" + (++month) + "/" + year;
         dpd = null;
-
         Toast.makeText(getContext(), date, Toast.LENGTH_SHORT).show();
     }
 }
