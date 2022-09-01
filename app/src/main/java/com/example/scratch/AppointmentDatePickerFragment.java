@@ -1,5 +1,6 @@
 package com.example.scratch;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -72,5 +73,7 @@ public class AppointmentDatePickerFragment extends DialogFragment implements Dat
         String date = "You picked the following date: " + day + "/" + (++month) + "/" + year;
         dpd = null;
         Toast.makeText(getContext(), date, Toast.LENGTH_SHORT).show();
+        DialogFragment timeFragment = new AppointmentTimePickerFragment();
+        timeFragment.show(getFragmentManager(), "timePicker");
     }
 }
