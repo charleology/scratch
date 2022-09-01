@@ -5,6 +5,7 @@ import static com.example.scratch.MainActivity.setWindowFlag;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -73,15 +74,7 @@ public class SignUp extends AppCompatActivity {
         fieldDBirthday.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //datePicker.show(getSupportFragmentManager(), "Material_Date_Picker");
-                //datePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener() {
-                //    @Override
-                //    public void onPositiveButtonClick(Object selection) {
-                //        fieldDBirthday.setText(datePicker.getHeaderText());
-                //    }
-                //});
-
-                DialogFragment newFragment = new DatePickerFragment();
+                DialogFragment newFragment = new AppointmentDatePickerFragment();
                 newFragment.show(getSupportFragmentManager(), "datePicker");
             }
         });

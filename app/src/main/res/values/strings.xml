@@ -45,7 +45,6 @@
     -You cannot create another account under the same email address.\n-and Activating your account again will require approval from the administrators.\n\nDo you want to continue?\n</string>
 
     <!--for timeline-->
-
     <string-array name="steps">
         <item>Send Request</item>
         <item>Awaiting Approval</item>
