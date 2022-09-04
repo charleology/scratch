@@ -9,7 +9,6 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
-import com.wdullaer.materialdatetimepicker.time.Timepoint;
 
 import java.util.Calendar;
 
@@ -50,4 +49,6 @@ public class AppointmentTimePickerFragment extends DialogFragment implements Tim
         tpd = null;
         Toast.makeText(getContext(), time, Toast.LENGTH_SHORT).show();
     }
-}
+
+    }
+
