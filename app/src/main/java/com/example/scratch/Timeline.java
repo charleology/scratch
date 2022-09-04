@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.DialogFragment;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -112,6 +113,11 @@ public class Timeline extends AppCompatActivity {
     public void onEditProfilePressed(View view){
         Intent i = new Intent(Timeline.this, EditProfile.class);
         startActivity(i);
+    }
+
+    public void onPressedSetAppointment(View view){
+        DialogFragment newFragment = new AppointmentDatePickerFragment();
+        newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 
 }

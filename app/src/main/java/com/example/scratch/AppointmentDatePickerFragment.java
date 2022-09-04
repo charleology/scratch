@@ -75,5 +75,6 @@ public class AppointmentDatePickerFragment extends DialogFragment implements Dat
         Toast.makeText(getContext(), date, Toast.LENGTH_SHORT).show();
         DialogFragment timeFragment = new AppointmentTimePickerFragment();
         timeFragment.show(getFragmentManager(), "timePicker");
+        this.dismiss();
     }
 }

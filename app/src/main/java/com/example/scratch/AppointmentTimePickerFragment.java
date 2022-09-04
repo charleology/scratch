@@ -48,6 +48,7 @@ public class AppointmentTimePickerFragment extends DialogFragment implements Tim
         String time = String.format("%02d:%02d %s", (hour == 12 || hour == 0) ? 12 : hour % 12, minute, isPM ? "PM" : "AM");
         tpd = null;
         Toast.makeText(getContext(), time, Toast.LENGTH_SHORT).show();
+        this.dismiss();
     }
 
     }

@@ -41,7 +41,6 @@ public class Homepage extends AppCompatActivity {
     TextView headerTitle, editProfileTv;
     ImageView filterImgview, messageImgview, menuImgview, closeDrawerBtn;
     Button applyBtn, aboutOfficeBtn, aboutUsBtn, adoptionHistoryBtn;
-    ImageView heartIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +57,6 @@ public class Homepage extends AppCompatActivity {
         messageImgview = (ImageView) findViewById(R.id.messageImgview);
         menuImgview = (ImageView) findViewById(R.id.menuImgview);
         applyBtn = (Button) findViewById(R.id.applyBtn);
-        heartIcon = (ImageView) findViewById(R.id.heartIcon);
         closeDrawerBtn = (ImageView) findViewById(R.id.closeDrawerBtn);
         aboutOfficeBtn = (Button) findViewById(R.id.aboutOfficeBtn);
         aboutUsBtn = (Button) findViewById(R.id.aboutUsBtn);

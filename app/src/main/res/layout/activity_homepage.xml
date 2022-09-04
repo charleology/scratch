@@ -25,7 +25,9 @@
             android:layout_height="match_parent"
             android:layout_weight="0.85"
             android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:background="@drawable/no_result_icon"
+            android:backgroundTint="@color/black">
 
             <com.yalantis.library.Koloda
                 android:id="@+id/koloda"
@@ -34,6 +36,20 @@
                 app:koloda_card_layout="@layout/item_koloda" />
 
         </LinearLayout>
+
+        <!--<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.85"
+            android:gravity="center">
+
+            <com.yalantis.library.Koloda
+                android:id="@+id/koloda"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:koloda_card_layout="@layout/item_koloda" />
+
+        </RelativeLayout>-->
 
         <LinearLayout
             android:layout_width="match_parent"
