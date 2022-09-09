@@ -31,7 +31,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 public class MainActivity extends AppCompatActivity {
 
     Button signUp, logIn;
-    TextView forgotPass;
+    TextView forgotPass, helpTv;
     EditText tfloginPassword;
     LoadingDialog loadingDialog = new LoadingDialog(MainActivity.this);
     ImageView showHideIv;
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
         forgotPass = (TextView) findViewById(R.id.forgotPassword);
         tfloginPassword = (EditText) findViewById(R.id.tfloginPassword);
         showHideIv = (ImageView) findViewById(R.id.showHideIv);
+        helpTv = (TextView) findViewById(R.id.helpTv);
 
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +90,11 @@ public class MainActivity extends AppCompatActivity {
                 forgotPassDia(MainActivity.this);
             }
         });
+    }
+
+    public void onPressedHelp(View view){
+        Intent i = new Intent(MainActivity.this, Help.class);
+        startActivity(i);
     }
 
     //method for forgot password dialog

@@ -65,4 +65,8 @@
     <string name="appointmentConfirmedBody2">\n\nPlease bring the following:\n\n\t- 2x2 ID Picture\n\t- Cage or Leash\n\t- Valid ID</string>
     <string name="successBody">You have successfully completed the adoption process.</string>
 
+    <string name="body1">Yes, the pets that are available for adoption are in good health and have undergone tests by the City Veterinary Office. </string>
+    <string name="body2">There are no costs involved, but be sure you have the necessary prerequisites.</string>
+    <string name="body3">For dogs, there is a limit of two that can be adopted, but there is no limit on cats.</string>
+
 </resources>

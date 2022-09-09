@@ -86,6 +86,11 @@ public class Homepage extends AppCompatActivity {
         finish();
     }
 
+    public void onPressedHelp(View view){
+        Intent i = new Intent(Homepage.this, Help.class);
+        startActivity(i);
+    }
+
     public void onPressedAdoptionHistory(View view){
         Intent i =  new Intent(Homepage.this, AdoptionHistory.class);
         startActivity(i);

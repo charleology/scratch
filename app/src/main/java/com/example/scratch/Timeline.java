@@ -120,4 +120,9 @@ public class Timeline extends AppCompatActivity {
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 
+    public void onPressedHelp(View view){
+        Intent i = new Intent(Timeline.this, Help.class);
+        startActivity(i);
+    }
+
 }

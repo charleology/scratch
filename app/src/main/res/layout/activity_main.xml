@@ -77,8 +77,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:gravity="center_vertical"
             android:background="@drawable/tf_background"
+            android:gravity="center_vertical"
             android:orientation="horizontal"
             android:weightSum="2">
 
@@ -87,8 +87,8 @@
                 style="@style/passField_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.35"
                 android:layout_gravity="center"
+                android:layout_weight="0.35"
                 android:hint="Password"
                 android:inputType="textPassword" />
 
@@ -103,17 +103,41 @@
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/forgotPassword"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="20dp"
-            android:clickable="true"
-            android:text="Forgot Password?"
-            android:textColor="@color/pink"
-            android:textSize="15sp"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="end"
+                android:textAlignment="textEnd"
+                android:clickable="true"
+                android:text="Forgot Password?"
+                android:textColor="@color/pink"
+                android:textSize="15sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/helpTv"
+                android:onClick="onPressedHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:text="Self-Help Center"
+                android:textColor="@color/pink"
+                android:textSize="15sp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -123,7 +147,7 @@
         android:gravity="center|bottom"
         android:orientation="vertical"
         android:paddingHorizontal="20dp"
-        android:paddingBottom="40dp">
+        android:paddingBottom="20dp">
 
         <Button
             android:id="@+id/btnLogin"
